@@ -16,7 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // grab and show the storyboard
+    UIStoryboard *storyboard = [self grabStoryboard];
+    self.window.rootViewController = [storyboard instantiateInitialViewController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -47,5 +52,37 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+// demo methods
+- (UIStoryboard *)grabStoryboard {
+    
+    // setup a variable
+    UIStoryboard *storyboard;
+    
+    // detect screen height
+    // using fixedCoordinateSpace means the height is always
+    // returned as "portrait up", even if the user holds
+    // their device in landscape
+    int height = [UIScreen mainScreen].fixedCoordinateSpace.bounds.size.height;
+    NSLog(@"The fixed height is %i", height);
+    
+    // determine if this is an iPad
+    if (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        
+        // it's an iPad 10.5" or lower
+        if (height <= 1024) {
+            
+            storyboard = [UIStoryboard storyboardWithName:@"iPad" bundle:nil];
+        } else {
+            // it's an iPad Pro 12.9"
+            storyboard = [UIStoryboard storyboardWithName:@"iPad-Pro" bundle:nil];
+        }
+        
+    } else {
+        // not an iPad, load regular storyboard
+        storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    }
+    
+    return  storyboard;
+}
 
 @end

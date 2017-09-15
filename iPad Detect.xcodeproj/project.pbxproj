@@ -15,6 +15,8 @@
 		D24999851F6C7A55000A85C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24999831F6C7A55000A85C6 /* LaunchScreen.storyboard */; };
 		D24999901F6C7A55000A85C6 /* iPad_DetectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D249998F1F6C7A55000A85C6 /* iPad_DetectTests.m */; };
 		D249999B1F6C7A55000A85C6 /* iPad_DetectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D249999A1F6C7A55000A85C6 /* iPad_DetectUITests.m */; };
+		D24999AC1F6C7E1C000A85C6 /* iPad-Pro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24999A81F6C7E1C000A85C6 /* iPad-Pro.storyboard */; };
+		D24999AD1F6C7E1C000A85C6 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24999AA1F6C7E1C000A85C6 /* iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D24999961F6C7A55000A85C6 /* iPad DetectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iPad DetectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D249999A1F6C7A55000A85C6 /* iPad_DetectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPad_DetectUITests.m; sourceTree = "<group>"; };
 		D249999C1F6C7A55000A85C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24999A91F6C7E1C000A85C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/iPad-Pro.storyboard"; sourceTree = "<group>"; };
+		D24999AB1F6C7E1C000A85C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,7 @@
 				D24999791F6C7A55000A85C6 /* AppDelegate.m */,
 				D249997B1F6C7A55000A85C6 /* ViewController.h */,
 				D249997C1F6C7A55000A85C6 /* ViewController.m */,
-				D249997E1F6C7A55000A85C6 /* Main.storyboard */,
+				D24999AE1F6C7E25000A85C6 /* Storyboards */,
 				D24999811F6C7A55000A85C6 /* Assets.xcassets */,
 				D24999831F6C7A55000A85C6 /* LaunchScreen.storyboard */,
 				D24999861F6C7A55000A85C6 /* Info.plist */,
@@ -138,6 +142,16 @@
 				D249999C1F6C7A55000A85C6 /* Info.plist */,
 			);
 			path = "iPad DetectUITests";
+			sourceTree = "<group>";
+		};
+		D24999AE1F6C7E25000A85C6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D249997E1F6C7A55000A85C6 /* Main.storyboard */,
+				D24999A81F6C7E1C000A85C6 /* iPad-Pro.storyboard */,
+				D24999AA1F6C7E1C000A85C6 /* iPad.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +262,8 @@
 			files = (
 				D24999851F6C7A55000A85C6 /* LaunchScreen.storyboard in Resources */,
 				D24999821F6C7A55000A85C6 /* Assets.xcassets in Resources */,
+				D24999AC1F6C7E1C000A85C6 /* iPad-Pro.storyboard in Resources */,
+				D24999AD1F6C7E1C000A85C6 /* iPad.storyboard in Resources */,
 				D24999801F6C7A55000A85C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +341,22 @@
 				D24999841F6C7A55000A85C6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D24999A81F6C7E1C000A85C6 /* iPad-Pro.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D24999A91F6C7E1C000A85C6 /* Base */,
+			);
+			name = "iPad-Pro.storyboard";
+			sourceTree = "<group>";
+		};
+		D24999AA1F6C7E1C000A85C6 /* iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D24999AB1F6C7E1C000A85C6 /* Base */,
+			);
+			name = iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -428,6 +460,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.iPad-Detect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -439,6 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.iPad-Detect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
